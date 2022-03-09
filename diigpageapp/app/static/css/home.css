@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap');
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    display: inline;
+    color: black;
+}
+.index-body {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.grid-container {
+  max-width: 980px;
+  margin: auto;
+}
+header {
+    width: 100%;
+    height: 140px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgb(245, 194, 236);
+}
+header .header-icons-container {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    background-color: rgb(68, 31, 119);}
+
+header .header-icons-container .icons {
+    width: 150px;
+    height: auto;
+    display: flex;
+    justify-items: flex-end;
+    align-items: center;
+    justify-content: space-between;
+    justify-self: end;
+    margin-right: 80px;
+}
+header .icons span {
+  color:white;
+}
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 90px;
+  background-color: rgb(205, 49, 199);
+}
+nav .nav-logo-container {
+  display: flex;
+  margin-left: 80px;
+  align-items: center;
+}
+nav .profile-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 80px;}
+
+.home-main {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  height: 100%;
+  background-image: url('../img/foto-background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.home-main .section-main-text {
+  display: grid;
+  grid-column: 2;
+  height: 350px;
+  margin-top: 80px;
+  justify-items: center;
+}
+.home-main-text {
+  font-size: 38px;
+  font-weight: 700px;
+  letter-spacing: 8px;
+  color: black;
+  text-align: center;
+}
+.home-main .section-main-buttons {
+  height: auto;
+  display: flex;
+  justify-items: stretch;
+  justify-items: flex-end;
+  align-items: center;
+  justify-content: space-between; 
+}
+.home-main-buttons {
+  text-decoration: none;
+  width: 120px;
+  height: 40px;
+  background-color: rgb(245, 194, 236);
+  display: grid;
+  align-items: center;
+  border-color: rgb(245, 194, 236);
+  border-width: 3px;
+  border-style: solid;
+}
+.home-main-buttons a {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.escrito-gallery-main {
+  display: grid;
+}
+.escrito-gallery-news-container {
+  background-color: rgb(210, 241, 255);
+  padding: 0 50px 40px;
+}
+.escrito-gallery-new {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 2fr;
+}
+.escrito-gallery-img-container {
+  grid-column: 1;
+}
+.escrito-gallery-img-container img {
+  width: 85%;
+}
+.escrito-gallery-news-info-container {
+  grid-column: 2;
+}
+.escrito-gallery-news-info-container p {
+  margin-bottom: 35px;
+}
+.escrito-gallery-posts-container {
+  padding: 0 50px 40px;
+  background-color: rgb(245, 194, 236);
+}
+.escrito-gallery-posts-container h3 {
+  border-bottom: 1px solid rgb(68, 31, 119);
+  padding-bottom: 20px;
+  text-align: center;
+}
+.escrito-gallery-buttons {
+  text-decoration: none;
+  width: 120px;
+  height: 40px;
+  background-color: rgb(68, 31, 119);
+  display: grid;
+  align-items: center;
+  border-color: rgb(68, 31, 119);
+  border-width: 3px;
+  border-style: solid;
+}
+.escrito-gallery-buttons a {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: rgb(136, 204, 243);
+}
+.escrito-gallery-posts-container .escrito-gallery-posts-container {
+  display: inline-block;
+  padding-left: 0px;
+  max-width: 27%;
+  margin-bottom: 50px;
+}
+.escrito-gallery-posts-container .escrito-gallery-posts-container p {
+  margin-bottom: 35px;
+}
+.escrito-gallery-posts-container .escrito-gallery-posts-container img {
+  width: 100%;
+}
+footer {
+  width: 100%;
+  height: 80px;
+  background-color: rgb(68, 31, 119);
+  border-top: 35px solid rgb(205, 49, 199);
+  text-align: center;
+}
+footer p {
+  color: white;
+  margin-top: 30px;
+}

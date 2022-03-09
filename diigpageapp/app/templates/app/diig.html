@@ -1,0 +1,34 @@
+{% extends 'app/index.html' %}
+{% load static %}
+
+{% block segunda_seccion_nav %}
+    <section class="profile-link">
+        <a href="{% url 'Users:login' %}">Inicia Sesión</a>
+    </section>
+{% endblock segunda_seccion_nav %}
+
+{% block contenido %}
+
+    <div class="overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <figure>
+                        <img src="{% static 'img/logo_diig_with_smile-1.png' %}" alt="Es un logo" width="400"/>
+                    </figure>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <h1>Diego Guerrero a.k.a. DIIG</h1>
+                    <p>
+                        Es estudiante de desarrollo backend, ciencia de
+                        datos y machine learning con python en Platzi. Además DJ de música 
+                        electronica y estudiante de producción músical de manera autodidacta.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock contenido %}
