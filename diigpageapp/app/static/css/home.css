@@ -69,7 +69,7 @@ nav .profile-link {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
   height: 100%;
-  background-image: url('../img/foto-background.png');
+  background-image: url('../media/img/foto-background.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;

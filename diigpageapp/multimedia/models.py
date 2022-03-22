@@ -1,6 +1,6 @@
 from django.db import models
 
-from users.models import Autor
+from escrito.models import Autor
 
 
 class Categoria_pub_multimedia(models.Model):
@@ -28,7 +28,7 @@ class Post_multimedia(models.Model):
         'Nombre del Set', max_length=255, null=False, blank=False                                        
     )
     pub_cre = models.DateField('Fecha de Creación', auto_now=False, auto_now_add=True)
-    image = models.URLField(max_length=255, blank=False, null=False)
+    image = models.ImageField(upload_to='img', blank=True, null=True)
     autor = models.ForeignKey(
         Autor, 
         on_delete=models.CASCADE,
@@ -38,7 +38,7 @@ class Post_multimedia(models.Model):
         Categoria_pub_multimedia,
         on_delete=models.CASCADE,
     )
-    archivo_multimedia = models.URLField(max_length=255, blank=False, null=False)
+    archivo_multimedia = models.FileField(upload_to='video',max_length=255, blank=False, null=False)
     status = models.BooleanField('Publicado/No Publicado', default=True)
 
     class Meta:

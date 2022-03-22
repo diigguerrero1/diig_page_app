@@ -24,18 +24,18 @@
     <header>
         <section class="header-icons-container">
             <div class="icons">
-                <a href="https://www.instagram.com/diig_guerrero1/"><img src="{% static 'img/instagram_logo.png' %}" alt="Instagram" width="25"></a>
-                <a href="https://github.com/diigguerrero1"><img src="{% static 'img/github_logo.png' %}" alt="GitHub" width="25"></a>
-                <a href="https://www.linkedin.com/in/diego-guerrero-01/"><img src="{% static 'img/linkedin_logo.png' %}" alt="LinkedIn" width="25"></a>
+                <a href="https://www.instagram.com/diig_guerrero1/"><img src="{% static 'media/img/instagram_logo.png' %}" alt="Instagram" width="25"></a>
+                <a href="https://github.com/diigguerrero1"><img src="{% static 'media/img/github_logo.png' %}" alt="GitHub" width="25"></a>
+                <a href="https://www.linkedin.com/in/diego-guerrero-01/"><img src="{% static 'media/img/linkedin_logo.png' %}" alt="LinkedIn" width="25"></a>
             </div>
         </section>
         <nav>
             <section class="nav-logo-container">
-                <a href="{% url 'App:inicio' %}"><img src="{% static 'img/logo_diig_with_smile-1.png' %}" alt="Logo DIIG" width="110"></a>
+                <a href="{% url 'App:inicio' %}"><img src="{% static 'media/img/logo_diig_with_smile-1.png' %}" alt="Logo DIIG" width="110"></a>
             </section>
             {% block segunda_seccion_nav %}
             <section class="profile-link">
-                <a href="{% url 'App:diig' %}">¿Quién es DIIG?</a>
+                <a href="{% url 'App:diig' %}">Biografía</a>
             </section>
             {% endblock segunda_seccion_nav %}
         </nav>

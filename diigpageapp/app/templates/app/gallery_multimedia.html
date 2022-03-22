@@ -1,9 +1,108 @@
 {% extends 'app/index.html' %}
 {% load static %}
 
-{% block contenido %}
+{% block head %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <meta name="description" content="Diego Guerrero a.k.a. DIIG es pythonista de corazón, estudiante de desarrollo backend con django e intelgencia artificial con TensorFlow en Platzi. También es DJ de géneros cómo: Techno, House o elektro y también estudia producción músical de manera autodidacta.">
+  
+  <meta name="robots" content="index, follow">
+  <title>Galeria de Posts</title>
 
-<h1>Acá se pondra una galeria con los diferentes posts de sets, canciones ó videos.</h1>
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/home.css'%}" rel="stylesheet">
+</head>
+{% endblock head %}
+
+{% block body %}
+<body>
+{% endblock body %}
+
+{% block contenido %}
+<main class="escrito-gallery-main">
+    <section class="escrito-gallery-news-container">
+        <div class="grid-container escrito-gallery-new">
+            <h3>Ultima Publicación</h3>
+            <div class="escrito-gallery-img-container">
+                <img src="{% static 'media/img/post-sample-image.jpg' %}" alt="imagen de post">
+            </div>
+            <div class="escrito-gallery-news-info-container">
+                <h2>Normalización Paramilitar</h2>
+                <p>El 28 de mayo fue un día terrorífico en la ciudad de Cali. Grupos armados de civiles salieron a disparar indiscriminadamente a otro grupo de ciudadanos que se encontraban por la zona. Esto sucedió mientras la policía -quienes parecían estar defendiendo a las personas fuertemente armadas- no hicieron nada para impedirlo. En vista de que el país tiene un ambiente bastante violento, es necesario explicar estos acontecimientos, esta vez, con un punto de vista guiado por un gran filósofo francés del siglo XX: Félix Guattari.</p>
+                <button class="escrito-gallery-buttons" style="margin-left: 10px;">
+                    <a href="{% url 'Multimedia:multi_gallery' %}">Leer</a>
+                </button>
+            </div>
+        </div>
+    </section>
+    <section class="escrito-gallery-posts-container">
+        <div class="grid-container">
+            <h3>Publicaciones Pasadas</h3>
+            <article class="escrito-gallery-posts-container">
+                <img src="{% static 'media/img/programacion.jpg' %}" alt="imagen post">
+                <p>Titulo Post</p>
+                <p>Resumen Post</p>
+                <button class="escrito-gallery-buttons" style="margin-left: 10px;">
+                    <a href="{% url 'Multimedia:multi_gallery' %}">Leer</a>
+                </button>
+            </article>
+            <article class="escrito-gallery-posts-container">
+                <img src="{% static 'media/img/programacion.jpg' %}" alt="imagen post">
+                <p>Titulo Post</p>
+                <p>Resumen Post</p>
+                <button class="escrito-gallery-buttons" style="margin-left: 10px;">
+                    <a href="{% url 'Multimedia:multi_gallery' %}">Leer</a>
+                </button>
+            </article>
+            <article class="escrito-gallery-posts-container">
+                <img src="{% static 'media/img/programacion.jpg' %}" alt="imagen post">
+                <p>Titulo Post</p>
+                <p>Resumen Post</p>
+                <button class="escrito-gallery-buttons" style="margin-left: 10px;">
+                    <a href="{% url 'Multimedia:multi_gallery' %}">Leer</a>
+                </button>
+            </article>
+            <article class="escrito-gallery-posts-container">
+                <img src="{% static 'media/img/programacion.jpg' %}" alt="imagen post">
+                <p>Titulo Post</p>
+                <p>Resumen Post</p>
+                <button class="escrito-gallery-buttons" style="margin-left: 10px;">
+                    <a href="{% url 'Multimedia:multi_gallery' %}">Leer</a>
+                </button>
+            </article>
+            <article class="escrito-gallery-posts-container">
+                <img src="{% static 'media/img/programacion.jpg' %}" alt="imagen post">
+                <p>Titulo Post</p>
+                <p>Resumen Post</p>
+                <button class="escrito-gallery-buttons" style="margin-left: 10px;">
+                    <a href="{% url 'Multimedia:multi_gallery' %}">Leer</a>
+                </button>
+            </article>
+            <article class="escrito-gallery-posts-container">
+                <img src="{% static 'media/img/programacion.jpg' %}" alt="imagen post">
+                <p>Titulo Post</p>
+                <p>Resumen Post</p>
+                <button class="escrito-gallery-buttons" style="margin-left: 10px;">
+                    <a href="{% url 'Multimedia:multi_gallery' %}">Leer</a>
+                </button>
+            </article>
+        </div>
+    </section>
+</main>
+<footer>
+    <section>
+        <div class="">
+            <a href="https://www.instagram.com/diig_guerrero1/"><img src="{% static 'media/img/instagram_logo.png' %}" alt="Instagram" width="25"></a>
+            <a href="https://github.com/diigguerrero1"><img src="{% static 'media/img/github_logo.png' %}" alt="GitHub" width="25"></a>
+            <a href="https://www.linkedin.com/in/diego-guerrero-01/"><img src="{% static 'media/img/linkedin_logo.png' %}" alt="LinkedIn" width="25"></a>
+        </div>
+    </section>
+    <p>DIIG Guerrero Productions.</p>
+</footer>
 
 {% endblock contenido %}
+
 

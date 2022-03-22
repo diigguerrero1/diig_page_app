@@ -1,34 +1,49 @@
 {% extends 'app/index.html' %}
 {% load static %}
 
-{% block segunda_seccion_nav %}
-    <section class="profile-link">
-        <a href="{% url 'Users:login' %}">Inicia Sesión</a>
-    </section>
-{% endblock segunda_seccion_nav %}
+{% block head %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <meta name="description" content="Diego Guerrero a.k.a. DIIG es pythonista de corazón, estudiante de desarrollo backend con django e intelgencia artificial con TensorFlow en Platzi. También es DJ de géneros cómo: Techno, House o elektro y también estudia producción músical de manera autodidacta.">
+  
+  <meta name="robots" content="index, follow">
+  <title>Galeria de Posts</title>
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/home.css'%}" rel="stylesheet">
+</head>
+{% endblock head %}
+
+
+{% block body %}
+<body>
+{% endblock body %}
 
 {% block contenido %}
-
-    <div class="overlay">
-        <div class="container">
-            <div class="row">
-                <div class="col-1">
-                    <figure>
-                        <img src="{% static 'img/logo_diig_with_smile-1.png' %}" alt="Es un logo" width="400"/>
-                    </figure>
-                </div>
+<main class="escrito-gallery-main">
+    <section class="escrito-gallery-news-container">
+        <div class="grid-container escrito-gallery-new">
+            <h3>Biografía</h3>
+            <div class="escrito-gallery-img-container">
+                <img src="{% static 'media/img/dj_diig.jpg' %}" alt="imagen de post">
             </div>
-            <div class="row">
-                <div class="col text-center">
-                    <h1>Diego Guerrero a.k.a. DIIG</h1>
-                    <p>
-                        Es estudiante de desarrollo backend, ciencia de
-                        datos y machine learning con python en Platzi. Además DJ de música 
-                        electronica y estudiante de producción músical de manera autodidacta.
-                    </p>
-                </div>
+            <div class="escrito-gallery-news-info-container">
+                <h2>Quién es Diego Guerrero A.K.A. DIIG</h2>
+                <p>Nacio el 26 de Diciembre de 1998 en la ciudad de Bogotá, Colombia. Desde pequeño fue un defensor del dialogo y la paz cómo método de resolución de conflictos. Apoyó firmemente los acuerdos de paz entre el gobierno Colombiano y las FARC en el 2016. Fue presidente del consejo de estudiantes y personero del colegio IED El Japón. Actualmente es DJ de musica electronica y estudiante de Desarrollo Backend, Ingenieria de Datos y Machine Learning con Python en Platzi. Al mismo tiempo se encuentra preparandose para ingresar a estudiar Física, entre otras cosas más.<br>
+                <br>
+                Se consiedera una persona bastante curiosa, que tiene muchas preguntas y muy pocas respuestas. Su meta en la vida es ayudar a otras personas, aprendiendo y enseñando sobre nuestra realidad, nuestro universo, nuestras relaciones humanas, entre otras cosas. Le gusta la filosofía moderna y le gustan las personas que se arriesgan por sus sueños y sus metas. 
+                </p>
+                <h4>Espero te guste este blog y explores todo mi sitio web ;)
+                <br>
+                <br>
+                Atentamente, DIIG </h4>
             </div>
         </div>
-    </div>
+    </section>
+</main>
 
 {% endblock contenido %}
+

@@ -3,6 +3,17 @@ from .models import *
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 
+class AutorResource(resources.ModelResource):
+    class Meta:
+        model = Autor
+
+class AutorAdmin(ImportExportModelAdmin, admin.ModelAdmin):
+    search_fields = ['name']
+    list_display = ('name', 'status', 'pub_cre')
+    resource_class = AutorResource
+
+admin.site.register(Autor, AutorAdmin)
+
 
 class Categoria_pub_escritaResource(resources.ModelResource):
     class Meta:
