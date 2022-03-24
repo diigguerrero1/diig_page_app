@@ -1,0 +1,52 @@
+{% extends 'app/index.html' %}
+{% load static %}
+
+{% block head %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <meta name="description" content="Diego Guerrero a.k.a. DIIG es pythonista de corazón, estudiante de desarrollo backend con django e intelgencia artificial con TensorFlow en Platzi. También es DJ de géneros cómo: Techno, House o elektro y también estudia producción músical de manera autodidacta.">
+  
+  <meta name="robots" content="index, follow">
+  <title>{{post.title}}</title>
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/home.css'%}" rel="stylesheet">
+</head>
+{% endblock head %}
+
+{% block body %}
+<body>
+{% endblock body %}
+
+
+{% block contenido %}
+<main>
+  <section class="escrito-post-img-container">
+    <img src="{{post.image.url}}" alt="Foto Post">
+  </section>
+  <section class="escrito-post-main-container">
+    <div class="grid-container">
+      <h3>{{ post.categoria }}</h3>
+      <article>
+        <h1>{{ post.title }}</h1>
+        {{ post.content | safe }}
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+    <div class="footer-icons">
+      <a href="https://www.instagram.com/diig_guerrero1/"><img src="{% static 'media/img/instagram_logo.png' %}" alt="Instagram" width="25"></a>
+      <a href="https://github.com/diigguerrero1"><img src="{% static 'media/img/github_logo.png' %}" alt="GitHub" width="25"></a>
+      <a href="https://www.linkedin.com/in/diego-guerrero-01/"><img src="{% static 'media/img/linkedin_logo.png' %}" alt="LinkedIn" width="25"></a>
+    </div>
+  <p>DIIG Guerrero Productions.</p>
+</footer>
+
+{% endblock contenido %}
+
+

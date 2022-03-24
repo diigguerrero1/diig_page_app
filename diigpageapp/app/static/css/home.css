@@ -175,9 +175,10 @@ nav .profile-link {
 .escrito-gallery-posts-container .escrito-gallery-posts-container img {
   width: 100%;
 }
+
 footer {
   width: 100%;
-  height: 80px;
+  height: 160px;
   background-color: rgb(68, 31, 119);
   border-top: 35px solid rgb(205, 49, 199);
   text-align: center;
@@ -185,4 +186,28 @@ footer {
 footer p {
   color: white;
   margin-top: 30px;
+}
+.footer-icons {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  justify-content:space-around;
+  height: 80px;
+} 
+
+.escrito-post-img-container {
+  padding: 0 50px 40px;
+  background-color: rgb(210, 241, 255);
+  text-align: center;
+}
+.escrito-post-img-container img {
+  width: 45%;
+}
+.escrito-post-main-container {
+  padding: 50px 50px 50px;
+  background-color: rgb(245, 194, 236);
+}
+.escrito-post-main-container h3 {
+  border-bottom: 1px solid rgb(68, 31, 119);
+  background-color: rgb(245, 194, 236);
 }

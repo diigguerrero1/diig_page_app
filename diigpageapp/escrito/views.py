@@ -23,5 +23,8 @@ def post_escrito(request, slug):
         slug = slug
     )
 
-    print(f'este es el formato de post: {post}')
-    return render(request, "app/post_escrito.html")
+    context = {
+        'post': post,
+    }
+
+    return render(request, "app/post_escrito.html", context)

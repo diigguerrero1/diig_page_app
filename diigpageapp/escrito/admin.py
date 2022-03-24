@@ -3,6 +3,7 @@ from .models import *
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
 
+
 class AutorResource(resources.ModelResource):
     class Meta:
         model = Autor
@@ -34,6 +35,6 @@ class Post_escritoResource(resources.ModelResource):
 class Post_escritoAdmin(ImportExportModelAdmin, admin.ModelAdmin):
     search_fields = ['title', 'slug']
     list_display = ('title', 'slug', 'pub_cre')
-    resource_class = Post_escrito
+    resource_class = Post_escritoResource
 
 admin.site.register(Post_escrito, Post_escritoAdmin)

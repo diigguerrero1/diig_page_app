@@ -88,7 +88,7 @@ DATABASES = {
         "NAME": "diig_page",
         "USER": "postgres",
         "PASSWORD": "@BraNAS2x",
-        "HOST": "localhost",
+        "HOST": "127.0.0.1",
         "PORT": 5432,
         "OPTIONS": {"options": "-c search_path=django,public,audit"},
     }}
