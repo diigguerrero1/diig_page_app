@@ -4,6 +4,7 @@ from django.shortcuts import render
 
 from escrito.models import Post_escrito
 
+
 def posts_gallery(request):
 
     total_posts = Post_escrito.objects.all()
@@ -16,6 +17,7 @@ def posts_gallery(request):
     }
 
     return render(request, "app/gallery_escrito.html", context)
+
 
 def post_escrito(request, slug):
 

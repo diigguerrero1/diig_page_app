@@ -23,8 +23,9 @@
 
 {% block contenido %}
 <main class="escrito-gallery-main">
-    {% if ultimate_post %}
+    
     <section class="escrito-gallery-news-container">
+        {% if ultimate_post %}
         <div class="grid-container escrito-gallery-new">
             <h3>Ultima Publicación</h3>
             <div class="escrito-gallery-img-container">
@@ -38,10 +39,14 @@
                 </button>
             </div>
         </div>
+        {% else %}
+        <H1>No hay Columnas en este momento</H1>
+        {% endif %}
     </section>
-    {% endif %}
+    
     <section class="escrito-gallery-posts-container">
         <div class="grid-container">
+            {% if posts %}
             <h3>Publicaciones Pasadas</h3>
             {% for post in posts %}
                 <article class="escrito-gallery-posts-container">
@@ -53,6 +58,9 @@
                     </button>
                 </article>
             {% endfor %}
+            {% else %}
+            <h1>No hay publicaciones pasadas.</h1>
+            {% endif %}
         </div>
     </section>
 </main>
