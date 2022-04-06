@@ -40,6 +40,8 @@ class Post_multimedia(models.Model):
     )
     archivo_multimedia = models.FileField(upload_to='video',max_length=255, blank=False, null=False)
     status = models.BooleanField('Publicado/No Publicado', default=True)
+    description = models.CharField('Descripción', max_length=510, blank=False, null=True)
+    slug = models.CharField('Slug', max_length=100, blank=False, null=True)
 
     class Meta:
         verbose_name = 'Post'
