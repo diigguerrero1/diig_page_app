@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 
+from .common_settings import config
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -85,11 +87,11 @@ WSGI_APPLICATION = 'diigpageapp.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "diig_page",
-        "USER": "postgres",
-        "PASSWORD": "@BraNAS2x",
-        "HOST": "127.0.0.1",
-        "PORT": 5432,
+        "NAME": config()['settings']['DATABASES']['local']['NAME'],
+        "USER": config()['settings']['DATABASES']['local']['USER'],
+        "PASSWORD": config()['settings']['DATABASES']['local']['PASSWORD'],
+        "HOST": config()['settings']['DATABASES']['local']['HOST'],
+        "PORT": config()['settings']['DATABASES']['local']['PORT'],
         "OPTIONS": {"options": "-c search_path=django,public,audit"},
     }}
 
