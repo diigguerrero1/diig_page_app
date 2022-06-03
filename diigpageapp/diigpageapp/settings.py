@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-0d+)dk7vw-#cbq9e1^^_(*@qv(lvk71u7wt1_v3!34k4l-fixg'
+SECRET_KEY = config()["settings"]["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -86,6 +86,15 @@ WSGI_APPLICATION = 'diigpageapp.wsgi.application'
 
 DATABASES = {
     "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": config()['settings']['DATABASES']['aws']['NAME'],
+        "USER": config()['settings']['DATABASES']['aws']['USER'],
+        "PASSWORD": config()['settings']['DATABASES']['aws']['PASSWORD'],
+        "HOST": config()['settings']['DATABASES']['aws']['HOST'],
+        "PORT": config()['settings']['DATABASES']['aws']['PORT'],
+        "OPTIONS": {"options": "-c search_path=django,public,audit"},
+    },
+    "local": {
         "ENGINE": "django.db.backends.postgresql",
         "NAME": config()['settings']['DATABASES']['local']['NAME'],
         "USER": config()['settings']['DATABASES']['local']['USER'],
